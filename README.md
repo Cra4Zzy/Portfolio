@@ -16,3 +16,16 @@ Du planst einen neuen Auftritt oder möchtest dein Unternehmen auf Social Media 
 - Individuelle Websites und digitale Markenauftritte
 
 Die Website ist responsiv umgesetzt und für Desktop, Tablet und Smartphone optimiert.
+
+
+## V2.1 Hero Update
+- Neue, conversion-orientierte Hero-Headline: „WEBSITES. DIE KUNDEN ÜBERZEUGEN.“
+- Hero-Copy geschärft.
+- Primary CTA deutlich heller und kontrastreicher.
+- Fehlerhafte CSS-Variable `--accent-green` auf `--accent-lime` korrigiert.
+
+
+## V2.3 Mobile Hero Fix
+- Mobile headline scales down fluidly so “ÜBERZEUGEN.” no longer clips.
+- Increased mobile line-height to give all three headline lines more breathing room.
+- Desktop/tablet layout remains unchanged.
