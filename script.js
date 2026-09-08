@@ -75,3 +75,19 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '350px 0px' });
 
 document.querySelectorAll('.project').forEach((project) => observer.observe(project));
+
+// Progressive reveal for editorial sections. Content remains visible without JS.
+document.documentElement.classList.add('js');
+const revealItems = [...document.querySelectorAll('[data-reveal]')];
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+}
