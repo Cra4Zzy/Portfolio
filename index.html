@@ -20,114 +20,166 @@
     <a class="brand" href="#top" aria-label="Zum Seitenanfang">
       <img class="brand-logo" src="assets/images/kaiser-logo.webp" alt="Kaiser-Webdesign Logo" />
     </a>
-    <a class="header-link" href="#work">Arbeiten <span>↓</span></a>
+    <nav class="header-nav" aria-label="Hauptnavigation">
+      <a href="#featured">Webdesign</a>
+      <a href="#videos">Social</a>
+      <a class="header-cta" href="#contact">Projekt starten <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-kicker">Kaiser-Webdesign / Portfolio</div>
-      <h1 id="hero-title">AUSGEWÄHLTE<br>ARBEITEN.</h1>
-      <div class="hero-meta">
-        <p>Hier findest du ausgewählte Websites, Videos und Designs – individuell entwickelt und passend zur jeweiligen Marke umgesetzt.</p>
-        <p class="muted">Du möchtest etwas Ähnliches für dein Unternehmen? Weitere Beispiele und Ideen zeige ich dir gerne persönlich.</p>
+    <section class="hero hero--portfolio" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <div class="hero-kicker"><span class="status-dot" aria-hidden="true"></span> Kaiser-Webdesign / Selected Work 2026</div>
+        <div class="hero-title-row">
+          <h1 id="hero-title">WEBSITES.<br><span>DIE KUNDEN</span><br>ÜBERZEUGEN.</h1>
+        </div>
+        <div class="hero-meta">
+          <p>Websites, die Vertrauen schaffen, im Kopf bleiben und Menschen leichter zur Anfrage führen.</p>
+          <p class="muted">Individuelles Webdesign, Development und Content – ohne Baukasten-Look und ohne austauschbare Templates.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#featured">Projekte ansehen <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://www.kaiser-webdesign.de/" target="_blank" rel="noopener noreferrer">Kaiser-Webdesign ansehen <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-services" aria-label="Leistungsbereiche">
+          <span>Webdesign</span><span>Development</span><span>Motion</span><span>Social</span>
+        </div>
       </div>
-      <div class="hero-sidecard" aria-hidden="true">
-        <img src="assets/images/kaiser-logo.webp" alt="" />
-        <span>Portfolio / Auswahl</span>
+
+      <div class="hero-visual" data-reveal>
+        <a class="hero-frame hero-frame--main" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase öffnen">
+          <img src="assets/images/website-aurelia-yachts-showcase.webp" alt="Aurelia Yachts Luxus-Website Showcase" />
+          <span class="frame-label">Aurelia Yachts / Showcase</span>
+        </a>
+        <a class="hero-frame hero-frame--float" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer" aria-label="Peter Kopp Website öffnen">
+          <img src="assets/images/website-peter-kopp.webp" alt="Website der Peter Kopp Dachdeckerei" />
+          <span class="frame-label">Peter Kopp / Live</span>
+        </a>
+        <span class="hero-visual-index" aria-hidden="true">01—02</span>
       </div>
+
       <div class="hero-rule" aria-hidden="true"></div>
     </section>
 
-    <section class="websites" id="work" aria-labelledby="websites-title">
-      <div class="section-head">
-        <h2 id="websites-title">Webdesign</h2>
-        <span>Projekte &amp; Showcases</span>
+    <section class="featured-work" id="featured" aria-labelledby="featured-title">
+      <span class="anchor-target" id="work" aria-hidden="true"></span>
+      <div class="section-head section-head--featured" data-reveal>
+        <div>
+          <span class="section-kicker">Selected Web Work</span>
+          <h2 id="featured-title">Zwei Projekte.<br>Zwei komplett andere Welten.</h2>
+        </div>
+        <p>Statt jedes Projekt gleich zu behandeln, zeigen die stärksten Arbeiten, wie unterschiedlich eine digitale Marke aussehen und wirken kann.</p>
       </div>
 
-      <p class="websites-intro">Websites, die Unternehmen klar positionieren, Leistungen verständlich zeigen und auf jedem Gerät professionell wirken.</p>
+      <article class="feature-case feature-case--kopp" data-reveal>
+        <div class="case-copy">
+          <div class="case-topline">
+            <span class="case-number">01</span>
+            <span class="case-status"><i aria-hidden="true"></i> Live Client Project</span>
+          </div>
+          <p class="case-sector">Dachhandwerk · Relaunch</p>
+          <h3>PETER<br>KOPP.</h3>
+          <p class="case-lead">Vom klassischen Handwerksauftritt zu einer markanten Website mit klarer Leistungsführung und direktem Weg zur Anfrage.</p>
+          <div class="case-services" aria-label="Leistungen für Peter Kopp">
+            <span>Konzept</span><span>UI Design</span><span>Frontend</span><span>Responsive</span>
+          </div>
+          <a class="case-link" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer">Live Website öffnen <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="case-media" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer" aria-label="Peter Kopp Website in neuem Tab öffnen">
+          <div class="case-browser">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>kopp-dach.de</em></div>
+            <img src="assets/images/website-peter-kopp.webp" alt="Startseite der Peter Kopp Dachdeckerei" loading="lazy" />
+          </div>
+          <span class="case-media-note">Echtes Kundenprojekt · Mönchsroth</span>
+        </a>
+      </article>
 
-      <div class="website-grid">
-        <a class="website-card" href="https://www.spanndeckenbau-vasyli.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Vasyl Shkurat in einem neuen Tab öffnen">
+      <article class="feature-case feature-case--yacht" data-reveal>
+        <a class="case-media" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase in neuem Tab öffnen">
+          <div class="case-browser case-browser--editorial">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>Aurelia / Concept</em></div>
+            <img src="assets/images/website-aurelia-yachts-showcase.webp" alt="Aurelia Yachts Showcase mit luxuriöser Yacht im Hero" loading="lazy" />
+          </div>
+          <span class="case-media-note">Fiktive Marke · Experimental Showcase</span>
+        </a>
+        <div class="case-copy">
+          <div class="case-topline">
+            <span class="case-number">02</span>
+            <span class="case-status case-status--gold"><i aria-hidden="true"></i> Design Showcase</span>
+          </div>
+          <p class="case-sector">Luxury · Editorial · Motion</p>
+          <h3>AURELIA<br><em>Yachts.</em></h3>
+          <p class="case-lead">Ein bewusst filmischer Showcase für eine fiktive Luxusmarke – entwickelt, um Art Direction, Typografie und hochwertige Interaktion zu zeigen.</p>
+          <div class="case-services" aria-label="Leistungen für Aurelia Yachts">
+            <span>Art Direction</span><span>Editorial UI</span><span>Motion</span><span>Frontend</span>
+          </div>
+          <a class="case-link" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer">Showcase erleben <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <div class="project-cta" data-reveal>
+        <p class="eyebrow">Nicht einfach „eine Website“</p>
+        <div>
+          <h3>DEIN AUFTRITT SOLL<br><span>WIEDERERKENNBAR</span> SEIN.</h3>
+          <a class="button button--light" href="#contact">Projekt besprechen <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="websites websites--archive" aria-labelledby="websites-title">
+      <div class="section-head" data-reveal>
+        <div>
+          <span class="section-kicker">Selected Archive</span>
+          <h2 id="websites-title">Weitere Websites</h2>
+        </div>
+        <span>04 Projekte</span>
+      </div>
+
+      <p class="websites-intro" data-reveal>Weitere Arbeiten aus Handwerk, Bau, Schulung und Gastronomie – bewusst kompakter präsentiert, damit die stärksten Cases den Raum bekommen, den sie verdienen.</p>
+
+      <div class="website-grid website-grid--archive">
+        <a class="website-card" href="https://www.spanndeckenbau-vasyli.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Vasyl Shkurat in einem neuen Tab öffnen" data-reveal>
           <div class="website-shot">
             <img src="assets/images/website-vasyli.webp" alt="Website für Vasyl Shkurat Trockenbau und Spanndecken" loading="lazy" />
             <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
           </div>
           <div class="website-info">
-            <span class="website-index">01</span>
-            <div>
-              <h3>Vasyl Shkurat</h3>
-              <p>Unternehmenswebsite / Handwerk</p>
-            </div>
+            <span class="website-index">03</span>
+            <div><h3>Vasyl Shkurat</h3><p>Unternehmenswebsite / Handwerk</p></div>
           </div>
         </a>
 
-        <a class="website-card" href="https://www.butz-bauwelt.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Butz Bauwelt in einem neuen Tab öffnen">
+        <a class="website-card" href="https://www.butz-bauwelt.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Butz Bauwelt in einem neuen Tab öffnen" data-reveal>
           <div class="website-shot">
             <img src="assets/images/website-butz-bauwelt.webp" alt="Website für Butz Bauwelt mit Leistungen für Wohnbau, Gewerbebau und Sanierung" loading="lazy" />
             <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
           </div>
           <div class="website-info">
-            <span class="website-index">02</span>
-            <div>
-              <h3>Butz Bauwelt</h3>
-              <p>Unternehmenswebsite / Bau &amp; Planung</p>
-            </div>
+            <span class="website-index">04</span>
+            <div><h3>Butz Bauwelt</h3><p>Unternehmenswebsite / Bau &amp; Planung</p></div>
           </div>
         </a>
 
-        <a class="website-card" href="https://gabelstaplerfahrschule-andreas.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Andreas Abbate in einem neuen Tab öffnen">
+        <a class="website-card" href="https://gabelstaplerfahrschule-andreas.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Andreas Abbate in einem neuen Tab öffnen" data-reveal>
           <div class="website-shot">
             <img src="assets/images/website-andreas-abbate.webp" alt="Website für Andreas Abbate Fahrschule und Prüfservice" loading="lazy" />
             <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
           </div>
           <div class="website-info">
-            <span class="website-index">03</span>
-            <div>
-              <h3>Andreas Abbate</h3>
-              <p>Unternehmenswebsite / Schulung &amp; Prüfservice</p>
-            </div>
+            <span class="website-index">05</span>
+            <div><h3>Andreas Abbate</h3><p>Unternehmenswebsite / Schulung &amp; Prüfservice</p></div>
           </div>
         </a>
 
-        <a class="website-card" href="https://www.xn--stern-dinkelsbhl-wzb.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Der Stern Dinkelsbühl in einem neuen Tab öffnen">
+        <a class="website-card" href="https://www.xn--stern-dinkelsbhl-wzb.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Der Stern Dinkelsbühl in einem neuen Tab öffnen" data-reveal>
           <div class="website-shot">
             <img src="assets/images/website-der-stern.webp" alt="Website für die Sportsbar Der Stern in Dinkelsbühl" loading="lazy" />
             <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
           </div>
           <div class="website-info">
-            <span class="website-index">04</span>
-            <div>
-              <h3>Der Stern</h3>
-              <p>Gastronomie-Website / Dinkelsbühl</p>
-            </div>
-          </div>
-        </a>
-
-        <a class="website-card" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Peter Kopp Dachdeckerei in einem neuen Tab öffnen">
-          <div class="website-shot">
-            <img src="assets/images/website-peter-kopp.webp" alt="Website für die Peter Kopp Dachdeckerei in Mönchsroth" loading="lazy" />
-            <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
-            <span class="website-index">05</span>
-            <div>
-              <h3>Peter Kopp</h3>
-              <p>Unternehmenswebsite / Dachhandwerk</p>
-            </div>
-          </div>
-        </a>
-
-        <a class="website-card" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase-Concept in einem neuen Tab öffnen">
-          <div class="website-shot">
-            <img src="assets/images/website-aurelia-yachts-showcase.webp" alt="Aurelia Yachts Showcase-Concept für eine fiktive Luxus-Yachtmarke" loading="lazy" />
-            <span class="website-open">Showcase öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
             <span class="website-index">06</span>
-            <div>
-              <h3>Aurelia Yachts</h3>
-              <p>Showcase / Concept · Fiktive Luxusmarke</p>
-            </div>
+            <div><h3>Der Stern</h3><p>Gastronomie-Website / Dinkelsbühl</p></div>
           </div>
         </a>
       </div>
@@ -385,10 +437,16 @@
       </div>
     </section>
 
-    <section class="outro" id="contact">
-      <p class="eyebrow">Kaiser-Webdesign</p>
-      <h2>MEHR<br>AUF ANFRAGE.</h2>
-      <p>Du möchtest dein Unternehmen professionell präsentieren oder suchst Inhalte, die wirklich zu deiner Marke passen? Schreib mir gerne – gemeinsam schauen wir, was zu dir und deinem Ziel passt.</p>
+    <section class="outro" id="contact" data-reveal>
+      <p class="eyebrow">Dein nächstes Projekt</p>
+      <h2>LASS UNS<br>WAS BAUEN.</h2>
+      <div class="outro-copy">
+        <p>Du willst einen digitalen Auftritt, der nach deinem Unternehmen aussieht – nicht nach einem Template? Dann schauen wir uns dein Projekt gemeinsam an.</p>
+        <div class="outro-actions">
+          <a class="button button--primary" href="https://www.kaiser-webdesign.de/" target="_blank" rel="noopener noreferrer">Projekt anfragen <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#featured">Projekte nochmal ansehen <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
     </section>
   </main>
 
