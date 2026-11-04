@@ -10,8 +10,8 @@
   <meta property="og:image" content="assets/images/kaiser-showcase.webp" />
   <meta name="theme-color" content="#090909" />
   <title>Kaiser-Webdesign — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css?v=portfolio-gallery-1" />
+  <script defer src="script.js?v=portfolio-gallery-1"></script>
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
@@ -49,12 +49,12 @@
 
       <div class="hero-visual" data-reveal>
         <a class="hero-frame hero-frame--main" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase öffnen">
-          <img src="assets/images/website-aurelia-yachts-showcase.webp" alt="Aurelia Yachts Luxus-Website Showcase" />
+          <img src="assets/images/aurelia-portfolio-1120.webp" srcset="assets/images/aurelia-portfolio-640.webp 640w, assets/images/aurelia-portfolio-1120.webp 1120w" sizes="(max-width: 900px) 90vw, 49vw" alt="Aktueller Aurelia Yachts Showcase" width="1600" height="747" fetchpriority="high" />
           <span class="frame-label">Aurelia Yachts / Showcase</span>
         </a>
-        <a class="hero-frame hero-frame--float" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer" aria-label="Peter Kopp Website öffnen">
-          <img src="assets/images/website-peter-kopp.webp" alt="Website der Peter Kopp Dachdeckerei" />
-          <span class="frame-label">Peter Kopp / Live</span>
+        <a class="hero-frame hero-frame--float" href="#featured" aria-label="ANKA Transport in der Projektgalerie ansehen">
+          <img src="assets/images/anka-portfolio-768.webp" alt="Website von ANKA Transport" width="768" height="359" />
+          <span class="frame-label">ANKA Transport / Webdesign</span>
         </a>
         <span class="hero-visual-index" aria-hidden="true">01—02</span>
       </div>
@@ -62,55 +62,133 @@
       <div class="hero-rule" aria-hidden="true"></div>
     </section>
 
-    <section class="featured-work" id="featured" aria-labelledby="featured-title">
-      <span class="anchor-target" id="work" aria-hidden="true"></span>
-      <div class="section-head section-head--featured" data-reveal>
-        <div>
-          <span class="section-kicker">Selected Web Work</span>
-          <h2 id="featured-title">Zwei Projekte.<br>Zwei komplett andere Welten.</h2>
+    <section class="portfolio" id="featured" aria-labelledby="featured-title">
+      <div class="portfolio-wrap">
+        <span class="anchor-target" id="work" aria-hidden="true"></span>
+        <header class="portfolio-head">
+          <div>
+            <p class="portfolio-label">Ausgewählte Arbeiten</p>
+            <h2 id="featured-title">Websites mit<br><em>eigenem Charakter.</em></h2>
+          </div>
+          <p>Von der Spedition bis zur freien Rednerin. Jede Website zeigt auf ihre Art, was das Unternehmen ausmacht.</p>
+        </header>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-case portfolio-case--lead">
+            <button class="portfolio-case-link" type="button" data-open-project="anka" aria-label="Projekt ANKA Transport ansehen">
+              <span class="portfolio-art portfolio-art--anka">
+                <img src="assets/images/anka-portfolio-1600.webp" srcset="assets/images/anka-portfolio-768.webp 768w, assets/images/anka-portfolio-1600.webp 1600w" sizes="(max-width:760px) 90vw, (max-width:1100px) 75vw, 64vw" alt="" width="1600" height="747" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">01 <span>Spedition &amp; Logistik</span></span>
+                <strong>ANKA <br>Transport</strong>
+                <span>Die Website bringt das Angebot auf den Punkt: Lkw mit Fahrer für regelmäßige Touren.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="portfolio-case">
+            <button class="portfolio-case-link" type="button" data-open-project="altstadt" aria-label="Projekt AltstadtApartments ansehen">
+              <span class="portfolio-art portfolio-art--altstadt">
+                <img src="assets/images/altstadtapartments-portfolio.webp" alt="" width="1600" height="780" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">02 <span>Ferienwohnungen</span></span>
+                <strong>AltstadtApartments</strong>
+                <span>Zwei Ferienwohnungen in Dinkelsbühl, mit zweisprachigem Auftritt und direktem Weg zur Buchung.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="portfolio-case">
+            <button class="portfolio-case-link" type="button" data-open-project="britta" aria-label="Projekt Britta Rethfeldt ansehen">
+              <span class="portfolio-art portfolio-art--britta">
+                <img src="assets/images/britta-rethfeldt-portfolio.webp" alt="" width="1600" height="780" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">03 <span>Freie Rednerin · Relaunch-Vorschau</span></span>
+                <strong>Britta Rethfeldt</strong>
+                <span>Ein persönlicher Auftritt mit eigenen Fotos, einem Portfolio und ihrer Stimme.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="portfolio-case">
+            <button class="portfolio-case-link" type="button" data-open-project="kopp" aria-label="Projekt Kopp-Dach ansehen">
+              <span class="portfolio-art portfolio-art--kopp">
+                <img src="assets/images/kopp-portfolio.webp" alt="" width="1600" height="790" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">04 <span>Dachhandwerk</span></span>
+                <strong>Kopp-Dach</strong>
+                <span>Kräftiges Rot, echte Baustellenbilder und ein kurzer Weg zur Anfrage.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="portfolio-case">
+            <button class="portfolio-case-link" type="button" data-open-project="avanti" aria-label="Projekt Avanti Haarstudio ansehen">
+              <span class="portfolio-art portfolio-art--avanti">
+                <img src="assets/images/avanti-portfolio.webp" alt="" width="1600" height="792" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">05 <span>Beauty &amp; Lifestyle</span></span>
+                <strong>Avanti Haarstudio</strong>
+                <span>Eine helle, persönliche Bildwelt, die schon vor dem Termin ein Gefühl für den Salon gibt.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="portfolio-case portfolio-case--lead">
+            <button class="portfolio-case-link" type="button" data-open-project="dv" aria-label="Projekt DV Transporte ansehen">
+              <span class="portfolio-art portfolio-art--dv">
+                <img src="assets/images/dv-portfolio.webp" alt="" width="1600" height="796" loading="lazy" decoding="async">
+              </span>
+              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
+              <span class="portfolio-card-title">
+                <span class="portfolio-tag">06 <span>Spedition &amp; Logistik</span></span>
+                <strong>DV Transporte</strong>
+                <span>Echte Fuhrparkbilder und eine klare Leistungsübersicht führen direkt zur Transportanfrage.</span>
+              </span>
+            </button>
+          </article>
         </div>
-        <p>Statt jedes Projekt gleich zu behandeln, zeigen die stärksten Arbeiten, wie unterschiedlich eine digitale Marke aussehen und wirken kann.</p>
+
+        <div class="portfolio-more">
+          <details>
+            <summary>Weitere Kundenprojekte <span class="portfolio-expand" aria-hidden="true"></span></summary>
+            <ul>
+              <li><button type="button" data-open-project="butz">Butz-Bauwelt <span aria-hidden="true">↗</span></button></li>
+              <li><button type="button" data-open-project="andreas">Fahrschule Andreas <span aria-hidden="true">↗</span></button></li>
+              <li><button type="button" data-open-project="stern">Der Stern <span aria-hidden="true">↗</span></button></li>
+            </ul>
+          </details>
+          <a href="#aurelia">Aurelia Yachts entdecken <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
+    </section>
 
-      <article class="feature-case feature-case--kopp" data-reveal>
-        <div class="case-copy">
-          <div class="case-topline">
-            <span class="case-number">01</span>
-            <span class="case-status"><i aria-hidden="true"></i> Live Client Project</span>
-          </div>
-          <p class="case-sector">Dachhandwerk · Relaunch</p>
-          <h3>PETER<br>KOPP.</h3>
-          <p class="case-lead">Vom klassischen Handwerksauftritt zu einer markanten Website mit klarer Leistungsführung und direktem Weg zur Anfrage.</p>
-          <div class="case-services" aria-label="Leistungen für Peter Kopp">
-            <span>Konzept</span><span>UI Design</span><span>Frontend</span><span>Responsive</span>
-          </div>
-          <a class="case-link" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer">Live Website öffnen <span aria-hidden="true">↗</span></a>
-        </div>
-        <a class="case-media" href="https://kopp-dach.de/" target="_blank" rel="noopener noreferrer" aria-label="Peter Kopp Website in neuem Tab öffnen">
-          <div class="case-browser">
-            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>kopp-dach.de</em></div>
-            <img src="assets/images/website-peter-kopp.webp" alt="Startseite der Peter Kopp Dachdeckerei" loading="lazy" />
-          </div>
-          <span class="case-media-note">Echtes Kundenprojekt · Mönchsroth</span>
-        </a>
-      </article>
-
+    <section class="featured-work portfolio-showcase" id="aurelia" aria-labelledby="aurelia-title">
       <article class="feature-case feature-case--yacht" data-reveal>
         <a class="case-media" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase in neuem Tab öffnen">
           <div class="case-browser case-browser--editorial">
             <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>Aurelia / Concept</em></div>
-            <img src="assets/images/website-aurelia-yachts-showcase.webp" alt="Aurelia Yachts Showcase mit luxuriöser Yacht im Hero" loading="lazy" />
+            <img src="assets/images/aurelia-portfolio-1120.webp" srcset="assets/images/aurelia-portfolio-640.webp 640w, assets/images/aurelia-portfolio-1120.webp 1120w, assets/images/aurelia-portfolio-1600.webp 1600w" sizes="(max-width: 900px) 90vw, 56vw" alt="Aktuelle Startseite von Aurelia Yachts mit einer Yacht im Sonnenuntergang" width="1600" height="747" loading="lazy" decoding="async" />
           </div>
           <span class="case-media-note">Fiktive Marke · Experimental Showcase</span>
         </a>
         <div class="case-copy">
           <div class="case-topline">
-            <span class="case-number">02</span>
-            <span class="case-status case-status--gold"><i aria-hidden="true"></i> Design Showcase</span>
+            <span class="case-status case-status--gold"><i aria-hidden="true"></i> Freies Motion-Konzept</span>
           </div>
-          <p class="case-sector">Luxury · Editorial · Motion</p>
-          <h3>AURELIA<br><em>Yachts.</em></h3>
-          <p class="case-lead">Ein bewusst filmischer Showcase für eine fiktive Luxusmarke – entwickelt, um Art Direction, Typografie und hochwertige Interaktion zu zeigen.</p>
+          <p class="case-sector">Typografie · Film · Interaktion</p>
+          <h2 id="aurelia-title">AURELIA<br><em>Yachts.</em></h2>
+          <p class="case-lead">Eine fiktive Yachtmarke, erzählt wie ein Film. Nach dem Einstieg steuert dein Scrollen die Szenen vom Atelier bis aufs offene Meer.</p>
           <div class="case-services" aria-label="Leistungen für Aurelia Yachts">
             <span>Art Direction</span><span>Editorial UI</span><span>Motion</span><span>Frontend</span>
           </div>
@@ -124,64 +202,6 @@
           <h3>DEIN AUFTRITT SOLL<br><span>WIEDERERKENNBAR</span> SEIN.</h3>
           <a class="button button--light" href="#contact">Projekt besprechen <span aria-hidden="true">↗</span></a>
         </div>
-      </div>
-    </section>
-
-    <section class="websites websites--archive" aria-labelledby="websites-title">
-      <div class="section-head" data-reveal>
-        <div>
-          <span class="section-kicker">Selected Archive</span>
-          <h2 id="websites-title">Weitere Websites</h2>
-        </div>
-        <span>04 Projekte</span>
-      </div>
-
-      <p class="websites-intro" data-reveal>Weitere Arbeiten aus Handwerk, Bau, Schulung und Gastronomie – bewusst kompakter präsentiert, damit die stärksten Cases den Raum bekommen, den sie verdienen.</p>
-
-      <div class="website-grid website-grid--archive">
-        <a class="website-card" href="https://www.spanndeckenbau-vasyli.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Vasyl Shkurat in einem neuen Tab öffnen" data-reveal>
-          <div class="website-shot">
-            <img src="assets/images/website-vasyli.webp" alt="Website für Vasyl Shkurat Trockenbau und Spanndecken" loading="lazy" />
-            <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
-            <span class="website-index">03</span>
-            <div><h3>Vasyl Shkurat</h3><p>Unternehmenswebsite / Handwerk</p></div>
-          </div>
-        </a>
-
-        <a class="website-card" href="https://www.butz-bauwelt.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Butz Bauwelt in einem neuen Tab öffnen" data-reveal>
-          <div class="website-shot">
-            <img src="assets/images/website-butz-bauwelt.webp?v=20260911-sharp" alt="Website für Butz Bauwelt mit Leistungen für Wohnbau, Gewerbebau und Sanierung" loading="lazy" />
-            <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
-            <span class="website-index">04</span>
-            <div><h3>Butz Bauwelt</h3><p>Unternehmenswebsite / Bau &amp; Planung</p></div>
-          </div>
-        </a>
-
-        <a class="website-card" href="https://gabelstaplerfahrschule-andreas.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Andreas Abbate in einem neuen Tab öffnen" data-reveal>
-          <div class="website-shot">
-            <img src="assets/images/website-andreas-abbate.webp" alt="Website für Andreas Abbate Fahrschule und Prüfservice" loading="lazy" />
-            <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
-            <span class="website-index">05</span>
-            <div><h3>Andreas Abbate</h3><p>Unternehmenswebsite / Schulung &amp; Prüfservice</p></div>
-          </div>
-        </a>
-
-        <a class="website-card" href="https://www.xn--stern-dinkelsbhl-wzb.de/" target="_blank" rel="noopener noreferrer" aria-label="Website von Der Stern Dinkelsbühl in einem neuen Tab öffnen" data-reveal>
-          <div class="website-shot">
-            <img src="assets/images/website-der-stern.webp" alt="Website für die Sportsbar Der Stern in Dinkelsbühl" loading="lazy" />
-            <span class="website-open">Website öffnen <span aria-hidden="true">↗</span></span>
-          </div>
-          <div class="website-info">
-            <span class="website-index">06</span>
-            <div><h3>Der Stern</h3><p>Gastronomie-Website / Dinkelsbühl</p></div>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -469,5 +489,6 @@
       </div>
     </div>
   </dialog>
+  <dialog class="portfolio-dialog" data-portfolio-dialog aria-labelledby="portfolio-dialog-title"><div class="dialog-bar"><span>KAISER / PROJEKTE</span><button type="button" class="dialog-close" data-close-dialog aria-label="Projektdetails schließen">Schließen <span aria-hidden="true">×</span></button></div><div class="dialog-inner"><p class="eyebrow" data-dialog-category></p><h2 id="portfolio-dialog-title"></h2><img data-dialog-image alt="" width="1600" height="900"><div class="dialog-info"><div><span class="eyebrow">DER GESTALTUNGSANSATZ</span><p data-dialog-description></p></div><div><span class="eyebrow">IM FOKUS</span><ul data-dialog-scope></ul><a class="text-link" data-dialog-link href="#" target="_blank" rel="noopener noreferrer"><span data-dialog-link-label>Website öffnen</span> <span aria-hidden="true">↗</span></a></div></div></div></dialog>
 </body>
 </html>
