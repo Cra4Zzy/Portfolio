@@ -1205,7 +1205,7 @@ button { font: inherit; }
   .feature-case--yacht .case-media { order: 2; }
   .feature-case--yacht .case-copy { order: 1; }
   .case-copy h3, .portfolio-showcase .case-copy h2 { font-size: clamp(64px, 12vw, 108px); }
-  .project-cta { grid-template-columns: 1fr; gap: 24px; }
+  .project-cta { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .website-grid--archive .website-card:nth-child(even) { margin-top: 0; }
 }
 
@@ -1238,7 +1238,7 @@ button { font: inherit; }
   .case-browser { border-radius: 12px; }
   .browser-bar { height: 28px; }
   .project-cta { margin-top: 64px; padding: 28px 22px; border-radius: 22px; }
-  .project-cta h3 { font-size: clamp(39px, 12.5vw, 60px); }
+  .project-cta h3 { font-size: clamp(22px, 7.5vw, 42px); line-height: .98; overflow-wrap: anywhere; }
   .websites--archive { padding: 70px 16px 82px; }
   .websites--archive .section-head h2 { font-size: 42px; }
   .outro-copy { margin: 0; }
