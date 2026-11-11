@@ -172,3 +172,79 @@ websiteDialog.addEventListener('close', () => {
   document.body.classList.remove('modal-open');
   websiteTrigger?.focus({ preventScroll: true });
 });
+
+
+// Kaiser Selected Work: project selection is explicit, keyboard accessible and
+// shares the existing project dialog, so no duplicate content or modal is needed.
+(() => {
+  const buttons = [...document.querySelectorAll('[data-select-work]')];
+  const stage = document.querySelector('[data-work-stage]');
+  if (!buttons.length || !stage) return;
+  const image = stage.querySelector('[data-work-image]');
+  const title = stage.querySelector('[data-work-title]');
+  const category = stage.querySelector('[data-work-category]');
+  const summary = stage.querySelector('[data-work-summary]');
+  const count = stage.querySelector('[data-work-count]');
+  const progress = stage.querySelector('[data-work-progress]');
+  const open = stage.querySelector('[data-work-open]');
+  const detail = stage.querySelector('[data-work-detail]');
+  const previous = document.querySelector('[data-work-previous]');
+  const next = document.querySelector('[data-work-next]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let current = 0;
+
+  function selectWork(index) {
+    current = (index + buttons.length) % buttons.length;
+    const selected = buttons[current];
+    const key = selected.dataset.selectWork;
+    const project = websiteProjects[key];
+    if (!project) return;
+    buttons.forEach((button, position) => {
+      const active = current === position;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    image.src = project.image;
+    image.alt = project.alt;
+    title.textContent = project.title;
+    category.textContent = selected.dataset.sector;
+    summary.textContent = selected.dataset.summary;
+    count.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(buttons.length).padStart(2, '0');
+    progress.style.width = ((current + 1) / buttons.length * 100) + '%';
+    for (const target of [open, detail]) {
+      target.dataset.openProject = key;
+      target.setAttribute('aria-label', 'Projekt ' + project.title + ' im Detail ansehen');
+    }
+    stage.classList.remove('is-arriving');
+    if (!reducedMotion.matches) {
+      void stage.offsetWidth;
+      stage.classList.add('is-arriving');
+    }
+  }
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => selectWork(index));
+    button.addEventListener('keydown', event => {
+      let destination;
+      if (event.key === 'ArrowDown' || event.key === 'ArrowRight') destination = index + 1;
+      else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') destination = index - 1;
+      else if (event.key === 'Home') destination = 0;
+      else if (event.key === 'End') destination = buttons.length - 1;
+      else return;
+      event.preventDefault();
+      const bounded = (destination + buttons.length) % buttons.length;
+      selectWork(bounded);
+      buttons[bounded].focus();
+    });
+    button.addEventListener('pointerenter', () => {
+      const project = websiteProjects[button.dataset.selectWork];
+      if (project) {
+        const preloaded = new Image();
+        preloaded.src = project.image;
+      }
+    }, { once: true });
+  });
+  previous?.addEventListener('click', () => selectWork(current - 1));
+  next?.addEventListener('click', () => selectWork(current + 1));
+  selectWork(0);
+})();

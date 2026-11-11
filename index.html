@@ -11,7 +11,8 @@
   <meta name="theme-color" content="#090909" />
   <title>Kaiser-Webdesign — Portfolio</title>
   <link rel="stylesheet" href="styles.css?v=portfolio-gallery-3" />
-  <script defer src="script.js?v=portfolio-gallery-1"></script>
+  <link rel="stylesheet" href="portfolio-premium.css?v=editorial-20261111-1" />
+  <script defer src="script.js?v=editorial-20261111-1"></script>
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
@@ -28,146 +29,98 @@
   </header>
 
   <main id="top">
-    <section class="hero hero--portfolio" aria-labelledby="hero-title">
-      <div class="hero-copy" data-reveal>
-        <div class="hero-kicker"><span class="status-dot" aria-hidden="true"></span> Kaiser-Webdesign / Selected Work 2026</div>
-        <div class="hero-title-row">
-          <h1 id="hero-title">WEBSITES.<br><span>DIE KUNDEN</span><br>ÜBERZEUGEN.</h1>
+    <!-- Editorial premium hero: one intentional featured project, no floating mini card. -->
+    <section class="portfolio-hero" aria-labelledby="hero-title">
+      <div class="portfolio-hero__inner">
+        <div class="portfolio-hero__copy" data-reveal>
+          <p class="portfolio-hero__eyebrow"><span class="portfolio-hero__dot" aria-hidden="true"></span> KAISER WEB DESIGN <span class="portfolio-hero__separator">/</span> SELECTED WORK 2026</p>
+          <h1 id="hero-title">Websites,<br><em>die bleiben.</em></h1>
+          <p class="portfolio-hero__lead">Nicht einfach online. Sondern unverwechselbar.</p>
+          <p class="portfolio-hero__description">Individuelle digitale Auftritte, die Marken sichtbar machen, Vertrauen schaffen und Menschen erreichen. Mit Haltung gestaltet und bis ins Detail durchdacht.</p>
+          <div class="portfolio-hero__actions">
+            <a class="portfolio-hero__primary" href="#featured">Arbeiten entdecken <span aria-hidden="true">↘</span></a>
+            <a class="portfolio-hero__secondary" href="https://www.kaiser-webdesign.de/" target="_blank" rel="noopener noreferrer">Zur Agentur <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="portfolio-hero__footnote"><span>01 — 06</span> Ausgewählte Arbeiten · Individuelles Webdesign</p>
         </div>
-        <div class="hero-meta">
-          <p>Websites, die Vertrauen schaffen, im Kopf bleiben und Menschen leichter zur Anfrage führen.</p>
-          <p class="muted">Individuelles Webdesign, Development und Content – ohne Baukasten-Look und ohne austauschbare Templates.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="button button--primary" href="#featured">Projekte ansehen <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="https://www.kaiser-webdesign.de/" target="_blank" rel="noopener noreferrer">Kaiser-Webdesign ansehen <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="hero-services" aria-label="Leistungsbereiche">
-          <span>Webdesign</span><span>Development</span><span>Motion</span><span>Social</span>
+        <div class="portfolio-hero__showcase" data-reveal>
+          <div class="portfolio-hero__showcase-top"><span>FEATURED EXPERIENCE</span><span>01 / AURELIA YACHTS</span></div>
+          <a class="portfolio-hero__feature" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase öffnen">
+            <img src="assets/images/aurelia-portfolio-1600.webp" srcset="assets/images/aurelia-portfolio-640.webp 640w, assets/images/aurelia-portfolio-1120.webp 1120w, assets/images/aurelia-portfolio-1600.webp 1600w" sizes="(max-width: 900px) 94vw, 52vw" width="1600" height="747" alt="Aurelia Yachts, luxuriöses Website-Showcase mit Yacht auf dem Meer" fetchpriority="high" decoding="async">
+            <span class="portfolio-hero__feature-footer"><span><small>KONZEPT / EDITORIAL MOTION</small><strong>Aurelia Yachts</strong></span><span class="portfolio-hero__feature-arrow" aria-hidden="true">↗</span></span>
+          </a>
+          <div class="portfolio-hero__showcase-caption"><span>DESIGN MIT WIRKUNG</span><span>STRATEGIE <i>·</i> ÄSTHETIK <i>·</i> ENTWICKLUNG</span></div>
         </div>
       </div>
-
-      <div class="hero-visual" data-reveal>
-        <a class="hero-frame hero-frame--main" href="https://cra4zzy.github.io/Luxury-Yacht-/" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Yachts Showcase öffnen">
-          <img src="assets/images/aurelia-portfolio-1120.webp" srcset="assets/images/aurelia-portfolio-640.webp 640w, assets/images/aurelia-portfolio-1120.webp 1120w" sizes="(max-width: 900px) 90vw, 49vw" alt="Aktueller Aurelia Yachts Showcase" width="1600" height="747" fetchpriority="high" />
-          <span class="frame-label">Aurelia Yachts / Showcase</span>
-        </a>
-        <a class="hero-frame hero-frame--float" href="#featured" aria-label="ANKA Transport in der Projektgalerie ansehen">
-          <img src="assets/images/anka-portfolio-768.webp" alt="Website von ANKA Transport" width="768" height="359" />
-          <span class="frame-label">ANKA Transport / Webdesign</span>
-        </a>
-      </div>
-
-      <div class="hero-rule" aria-hidden="true"></div>
     </section>
 
-    <section class="portfolio" id="featured" aria-labelledby="featured-title">
-      <div class="portfolio-wrap">
-        <span class="anchor-target" id="work" aria-hidden="true"></span>
-        <header class="portfolio-head">
+    <!-- Curated editorial showcase: restrained project rail + single changing stage. -->
+    <section class="selected-work" id="featured" aria-labelledby="featured-title">
+      <span class="anchor-target" id="work" aria-hidden="true"></span>
+      <div class="selected-work__inner">
+        <header class="selected-work__intro">
           <div>
-            <p class="portfolio-label">Ausgewählte Arbeiten</p>
-            <h2 id="featured-title">Websites mit<br><em>eigenem Charakter.</em></h2>
+            <p class="selected-work__eyebrow"><span class="selected-work__line" aria-hidden="true"></span> 01 / AUSGEWÄHLTE WEBSITES</p>
+            <h2 id="featured-title">Jede Marke.<br><em>Eine eigene Handschrift.</em></h2>
           </div>
-          <p>Von der Spedition bis zur freien Rednerin. Jede Website zeigt auf ihre Art, was das Unternehmen ausmacht.</p>
+          <p>Von der Spedition bis zur freien Rednerin. Sechs Projekte, sechs individuelle Antworten auf die Frage, wie ein starker digitaler Auftritt aussehen kann.</p>
         </header>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-case portfolio-case--lead">
-            <button class="portfolio-case-link" type="button" data-open-project="anka" aria-label="Projekt ANKA Transport ansehen">
-              <span class="portfolio-art portfolio-art--anka">
-                <img src="assets/images/anka-portfolio-1600.webp" srcset="assets/images/anka-portfolio-768.webp 768w, assets/images/anka-portfolio-1600.webp 1600w" sizes="(max-width:760px) 90vw, (max-width:1100px) 75vw, 64vw" alt="" width="1600" height="747" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">01 <span>Spedition &amp; Logistik</span></span>
-                <strong>ANKA <br>Transport</strong>
-                <span>Die Website bringt das Angebot auf den Punkt: Lkw mit Fahrer für regelmäßige Touren.</span>
-              </span>
+        <div class="selected-work__editorial">
+          <div class="selected-work__rail" aria-label="Projekt auswählen">
+            <p class="selected-work__rail-heading"><span>PROJEKT / AUSWAHL</span><span>01 — 06</span></p>
+            <div class="selected-work__items" role="group" aria-label="Webdesign-Projekte">
+              <button type="button" class="selected-work__item is-active" data-select-work="anka" data-sector="SPEDITION &amp; LOGISTIK" data-summary="Klare Leistungen. Echte Fahrzeuge. Ein Auftritt, der Professionalität sichtbar macht." aria-pressed="true">
+                <span class="selected-work__item-number">01</span><span class="selected-work__item-main"><strong>ANKA Transport</strong><small>Spedition &amp; Logistik</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" class="selected-work__item" data-select-work="altstadt" data-sector="HOTELLERIE &amp; FERIENWOHNUNGEN" data-summary="Atmosphäre, Architektur und eine klare Buchungsreise – mitten in Dinkelsbühl." aria-pressed="false">
+                <span class="selected-work__item-number">02</span><span class="selected-work__item-main"><strong>AltstadtApartments</strong><small>Ferienwohnungen</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" class="selected-work__item" data-select-work="britta" data-sector="PERSÖNLICHE DIENSTLEISTUNGEN" data-summary="Eine digitale Bühne für Persönlichkeit, Vertrauen und besondere Geschichten." aria-pressed="false">
+                <span class="selected-work__item-number">03</span><span class="selected-work__item-main"><strong>Britta Rethfeldt</strong><small>Freie Rednerin</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" class="selected-work__item" data-select-work="kopp" data-sector="DACHHANDWERK" data-summary="Markante Typografie und echtes Handwerk für einen Auftritt mit Haltung." aria-pressed="false">
+                <span class="selected-work__item-number">04</span><span class="selected-work__item-main"><strong>Kopp-Dach</strong><small>Handwerk</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" class="selected-work__item" data-select-work="avanti" data-sector="BEAUTY &amp; LIFESTYLE" data-summary="Eine helle, persönliche Markenwelt, die den Charakter des Salons einfängt." aria-pressed="false">
+                <span class="selected-work__item-number">05</span><span class="selected-work__item-main"><strong>Avanti Haarstudio</strong><small>Beauty &amp; Lifestyle</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button type="button" class="selected-work__item" data-select-work="dv" data-sector="TRANSPORT &amp; LOGISTIK" data-summary="Großzügige Bildwelten und klare Wege zur Transportanfrage." aria-pressed="false">
+                <span class="selected-work__item-number">06</span><span class="selected-work__item-main"><strong>DV Transporte</strong><small>Transport &amp; Logistik</small></span><span class="selected-work__item-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <div class="selected-work__rail-footer">
+              <span>INDIVIDUELL STATT AUSTAUSCHBAR.</span>
+              <div class="selected-work__arrows" aria-label="Projekt wechseln">
+                <button type="button" data-work-previous aria-label="Vorheriges Projekt">←</button>
+                <button type="button" data-work-next aria-label="Nächstes Projekt">→</button>
+              </div>
+            </div>
+          </div>
+          <article class="selected-work__stage" data-work-stage>
+            <div class="selected-work__stage-bar"><span><span class="selected-work__live-dot" aria-hidden="true"></span> EINBLICK / WEBSITE</span><span data-work-count>01 / 06</span></div>
+            <button class="selected-work__stage-media" type="button" data-open-project="anka" data-work-open aria-label="Projekt ANKA Transport im Detail ansehen">
+              <img src="assets/images/anka-portfolio-1600.webp" width="1600" height="747" alt="ANKA Transport – Website mit Mercedes-Benz-Lkw und orangefarbener Typografie" data-work-image decoding="async">
+              <span class="selected-work__image-hint">Projekt ansehen <span aria-hidden="true">↗</span></span>
             </button>
-          </article>
-
-          <article class="portfolio-case">
-            <button class="portfolio-case-link" type="button" data-open-project="altstadt" aria-label="Projekt AltstadtApartments ansehen">
-              <span class="portfolio-art portfolio-art--altstadt">
-                <img src="assets/images/altstadtapartments-portfolio.webp" alt="" width="1600" height="780" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">02 <span>Ferienwohnungen</span></span>
-                <strong>AltstadtApartments</strong>
-                <span>Zwei Ferienwohnungen in Dinkelsbühl, mit zweisprachigem Auftritt und direktem Weg zur Buchung.</span>
-              </span>
-            </button>
-          </article>
-
-          <article class="portfolio-case">
-            <button class="portfolio-case-link" type="button" data-open-project="britta" aria-label="Projekt Britta Rethfeldt ansehen">
-              <span class="portfolio-art portfolio-art--britta">
-                <img src="assets/images/britta-rethfeldt-portfolio.webp" alt="" width="1600" height="780" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">03 <span>Freie Rednerin · Relaunch-Vorschau</span></span>
-                <strong>Britta Rethfeldt</strong>
-                <span>Ein persönlicher Auftritt mit eigenen Fotos, einem Portfolio und ihrer Stimme.</span>
-              </span>
-            </button>
-          </article>
-
-          <article class="portfolio-case">
-            <button class="portfolio-case-link" type="button" data-open-project="kopp" aria-label="Projekt Kopp-Dach ansehen">
-              <span class="portfolio-art portfolio-art--kopp">
-                <img src="assets/images/kopp-portfolio.webp" alt="" width="1600" height="790" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">04 <span>Dachhandwerk</span></span>
-                <strong>Kopp-Dach</strong>
-                <span>Kräftiges Rot, echte Baustellenbilder und ein kurzer Weg zur Anfrage.</span>
-              </span>
-            </button>
-          </article>
-
-          <article class="portfolio-case">
-            <button class="portfolio-case-link" type="button" data-open-project="avanti" aria-label="Projekt Avanti Haarstudio ansehen">
-              <span class="portfolio-art portfolio-art--avanti">
-                <img src="assets/images/avanti-portfolio.webp" alt="" width="1600" height="792" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">05 <span>Beauty &amp; Lifestyle</span></span>
-                <strong>Avanti Haarstudio</strong>
-                <span>Eine helle, persönliche Bildwelt, die schon vor dem Termin ein Gefühl für den Salon gibt.</span>
-              </span>
-            </button>
-          </article>
-
-          <article class="portfolio-case portfolio-case--lead">
-            <button class="portfolio-case-link" type="button" data-open-project="dv" aria-label="Projekt DV Transporte ansehen">
-              <span class="portfolio-art portfolio-art--dv">
-                <img src="assets/images/dv-portfolio.webp" alt="" width="1600" height="796" loading="lazy" decoding="async">
-              </span>
-              <span class="portfolio-card-icon" aria-hidden="true">↗</span>
-              <span class="portfolio-card-title">
-                <span class="portfolio-tag">06 <span>Spedition &amp; Logistik</span></span>
-                <strong>DV Transporte</strong>
-                <span>Echte Fuhrparkbilder und eine klare Leistungsübersicht führen direkt zur Transportanfrage.</span>
-              </span>
-            </button>
+            <div class="selected-work__stage-details">
+              <div class="selected-work__stage-text">
+                <p class="selected-work__stage-sector" data-work-category>SPEDITION &amp; LOGISTIK</p>
+                <h3 data-work-title>ANKA Transport</h3>
+                <p data-work-summary>Klare Leistungen. Echte Fahrzeuge. Ein Auftritt, der Professionalität sichtbar macht.</p>
+              </div>
+              <button type="button" class="selected-work__stage-detail" data-open-project="anka" data-work-detail aria-label="Projekt ANKA Transport öffnen"><span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="selected-work__progress"><span data-work-progress></span></div>
           </article>
         </div>
-
-        <div class="portfolio-more">
-          <details>
-            <summary>Weitere Kundenprojekte <span class="portfolio-expand" aria-hidden="true"></span></summary>
-            <ul>
-              <li><button type="button" data-open-project="butz">Butz-Bauwelt <span aria-hidden="true">↗</span></button></li>
-              <li><button type="button" data-open-project="andreas">Fahrschule Andreas <span aria-hidden="true">↗</span></button></li>
-              <li><button type="button" data-open-project="stern">Der Stern <span aria-hidden="true">↗</span></button></li>
-            </ul>
-          </details>
-          <a href="#aurelia">Aurelia Yachts entdecken <span aria-hidden="true">↓</span></a>
+        <div class="selected-work__after">
+          <p>WEITERE ARBEITEN <span>—</span> ENTDECKEN</p>
+          <div class="selected-work__after-links">
+            <button type="button" data-open-project="butz">Butz-Bauwelt <span aria-hidden="true">↗</span></button>
+            <button type="button" data-open-project="andreas">Fahrschule Andreas <span aria-hidden="true">↗</span></button>
+            <button type="button" data-open-project="stern">Der Stern <span aria-hidden="true">↗</span></button>
+            <a href="#aurelia">Aurelia Yachts <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
       </div>
     </section>
