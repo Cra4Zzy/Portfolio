@@ -158,3 +158,32 @@
   .selected-work__item, .selected-work__item-arrow { transition:none !important; animation:none !important; }
   .selected-work__stage.is-arriving .selected-work__stage-media img, .selected-work__stage.is-arriving .selected-work__stage-text { animation:none; }
 }
+
+
+/* True client homepages: iframe shows the original rendered site, not a
+   fake overlay. A genuine project photo is retained as a non-iframe fallback. */
+.selected-work__stage-media img[hidden], .portfolio-dialog img[hidden],
+.selected-work__live-preview[hidden], .portfolio-dialog__live[hidden] { display: none !important; }
+.selected-work__stage-media .selected-work__live-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1901 / 942;
+  overflow: hidden;
+  background: #15201b;
+  pointer-events: none;
+  border: 0;
+}
+.selected-work__live-preview iframe, .portfolio-dialog__live iframe {
+  position: absolute; display: block; width: 1901px; height: 942px;
+  max-width: none; border: 0; overflow: hidden; transform-origin: top left;
+  pointer-events: none; background: #15201b;
+}
+.portfolio-dialog__live {
+  display: block; width: 100%; aspect-ratio: 1901 / 942;
+  position: relative; overflow: hidden; background: #15201b; border-radius: 6px;
+  margin: 0 0 20px;
+}
+/* The authentic Yacht screenshot is panoramic and must not be stretched. */
+.portfolio-hero__feature img { aspect-ratio: 1903 / 942; object-fit: contain; }
+.feature-case--yacht .case-browser img { aspect-ratio: 1903 / 942; object-fit: contain; width: 100%; height: auto; }

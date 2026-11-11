@@ -105,17 +105,19 @@ const websiteProjects = {
  altstadt:{
   title:'AltstadtApartments Dinkelsbühl',
   category:'KUNDENPROJEKT / FERIENWOHNUNGEN',
-  image:'assets/images/altstadtapartments-portfolio.webp',
-  alt:'Projektmotiv für AltstadtApartments mit dem Wohnzimmer einer Ferienwohnung',
+  image:'https://raw.githubusercontent.com/Cra4Zzy/Altstadtapartments/main/assets/img/events/altstadt-abend-1536.webp',
+  alt:'Originales Titelbild der AltstadtApartments-Website in Dinkelsbühl',
+  previewUrl:'https://www.altstadtapartments-dinkelsbuehl.de/',
   description:'Zwei Ferienwohnungen mitten in Dinkelsbühl. Der Relaunch zeigt, wie die Apartments aussehen, für wie viele Gäste sie geeignet sind und wie man den Aufenthalt buchen kann. Gäste können zwischen Deutsch und Englisch wechseln.',
   scope:['Website-Relaunch auf Deutsch und Englisch','Eigene Seiten für beide Apartments','Buchungsanbindung mit Smoobu'],
-  url:null
+  url:'https://www.altstadtapartments-dinkelsbuehl.de/'
  },
  britta:{
   title:'Britta Rethfeldt',
   category:'KUNDENPROJEKT / RELAUNCH-VORSCHAU',
-  image:'assets/images/britta-rethfeldt-portfolio.webp',
-  alt:'Projektmotiv für Britta Rethfeldt mit ihrem Porträt auf einer Brücke',
+  image:'https://raw.githubusercontent.com/Cra4Zzy/Britta-Rednerin-/main/assets/images/britta-persoenlich.webp',
+  alt:'Originales Porträtmotiv der Website von Britta Rethfeldt',
+  previewUrl:'https://cra4zzy.github.io/Britta-Rednerin-/',
   description:'Brittas neuer Auftritt zeigt, wer sie ist und wie sie Zeremonien gestaltet. Eigene Fotos, ein Portfolio mit Eindrücken von Feiern und eine Stimmprobe geben einen persönlichen ersten Eindruck.',
   scope:['Website-Relaunch für eine freie Rednerin','Fotografie-Portfolio','Stimmprobe direkt auf der Website'],
   url:'https://cra4zzy.github.io/Britta-Rednerin-/',
@@ -147,6 +149,15 @@ document.querySelectorAll('[data-open-project]').forEach((button) => {
     websiteCategory.textContent = project.category;
     websiteImage.src = project.image;
     websiteImage.alt = project.alt;
+    const livePreview = websiteDialog.querySelector('[data-dialog-live]');
+    const liveFrame = websiteDialog.querySelector('[data-dialog-live-frame]');
+    if (livePreview && liveFrame) {
+      livePreview.hidden = !project.previewUrl;
+      websiteImage.hidden = !!project.previewUrl;
+      if (project.previewUrl) {
+        if (liveFrame.getAttribute('src') !== project.previewUrl) liveFrame.src = project.previewUrl;
+      } else liveFrame.removeAttribute('src');
+    }
     websiteDescription.textContent = project.description;
     websiteScope.replaceChildren(...project.scope.map((text) => {
       const item = document.createElement('li');
@@ -160,6 +171,7 @@ document.querySelectorAll('[data-open-project]').forEach((button) => {
     }
     websiteDialog.showModal();
     websiteDialog.scrollTop = 0;
+    resizeOriginalSiteFrames();
     document.body.classList.add('modal-open');
   });
 });
@@ -206,6 +218,15 @@ websiteDialog.addEventListener('close', () => {
     });
     image.src = project.image;
     image.alt = project.alt;
+    const live = stage.querySelector('[data-work-live]');
+    const liveFrame = stage.querySelector('[data-work-live-frame]');
+    if (live && liveFrame) {
+      live.hidden = !project.previewUrl;
+      image.hidden = !!project.previewUrl;
+      if (project.previewUrl) {
+        if (liveFrame.getAttribute('src') !== project.previewUrl) liveFrame.src = project.previewUrl;
+      } else liveFrame.removeAttribute('src');
+    }
     title.textContent = project.title;
     category.textContent = selected.dataset.sector;
     summary.textContent = selected.dataset.summary;
@@ -216,6 +237,7 @@ websiteDialog.addEventListener('close', () => {
       target.setAttribute('aria-label', 'Projekt ' + project.title + ' im Detail ansehen');
     }
     stage.classList.remove('is-arriving');
+    resizeOriginalSiteFrames();
     if (!reducedMotion.matches) {
       void stage.offsetWidth;
       stage.classList.add('is-arriving');
@@ -248,3 +270,24 @@ websiteDialog.addEventListener('close', () => {
   next?.addEventListener('click', () => selectWork(current + 1));
   selectWork(0);
 })();
+
+
+// True website previews (not reconstructed mockups): display the original
+// homepage at desktop width, scaled proportionally inside each frame.
+function resizeOriginalSiteFrames() {
+  const baseWidth = 1901, baseHeight = 942;
+  document.querySelectorAll('[data-work-live]:not([hidden]), [data-dialog-live]:not([hidden])')
+    .forEach(wrapper => {
+      const frame = wrapper.querySelector('iframe');
+      if (!frame || !wrapper.clientWidth || !wrapper.clientHeight) return;
+      const scale = Math.min(wrapper.clientWidth / baseWidth, wrapper.clientHeight / baseHeight);
+      frame.style.transform = 'scale(' + scale + ')';
+      frame.style.left = ((wrapper.clientWidth - baseWidth * scale) / 2) + 'px';
+      frame.style.top = ((wrapper.clientHeight - baseHeight * scale) / 2) + 'px';
+    });
+}
+if ('ResizeObserver' in window) {
+  const originalSiteResizeObserver = new ResizeObserver(resizeOriginalSiteFrames);
+  document.querySelectorAll('[data-work-live], [data-dialog-live]').forEach(node => originalSiteResizeObserver.observe(node));
+}
+window.addEventListener('resize', resizeOriginalSiteFrames, {passive:true});
